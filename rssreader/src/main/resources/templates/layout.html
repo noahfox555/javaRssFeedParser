@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>RSS Feed Searcher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        table {
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border-collapse: collapse;
+            padding: 20px;
+            /* margin-left: 5%;
+            margin-right: 5%; */
+            /* max-width: 100%; */
+            /* text-align: center; */
+        }
+
+        .form {
+            margin-left: 12.5%;
+        }
+
+        .instructions {
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+        }
+
+        .searchResults {
+            margin-left: 12.5%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h3 class='instructions'>RSS feed must be entered. Leave 'Search Phrase' empty to see all articles.</h3>
+    <form class='form' action="/" method="post">
+        <!-- The th:field tag is the problem -->
+        <input type='text' placeholder='RSS Feed URL' name = 'rssFeedURL'>
+        <input type='text' placeholder='Search Phrase' name='searchPhrase'>
+        <input type='Submit' value='submit'>
+    </form>
+
+    <br>
+    <div layout:fragment="content">
+        <p>Changing contents</p>
+    </div>
+</body>
+</html>

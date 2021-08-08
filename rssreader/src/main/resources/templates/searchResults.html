@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+
+<body>
+    <div layout:fragment="content">
+        <h3 class='searchResults'>Search Results: <h th:text="${searchResults}">
+        </h3>
+
+        <table class="table table-striped">
+            <tr th:each="title,iter : ${titlesList}">
+                <td>
+                    <h3><a th:href="${links[iter.index]}" th:target="_blank">
+                            <h th:text="${title}">
+                        </a></h3>
+                        <!-- <h th:text="${links[iter.index]}"> -->
+                    <!-- <h4 th:text="${pubDates[iter.index]}"> -->
+                </td>
+                <div th:if="${!images.empty}">
+                    <td>
+                        <img alt="image" th:src="${images[iter.index]}" width="50%">
+                    </td>  
+                </div>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+
+</html>
