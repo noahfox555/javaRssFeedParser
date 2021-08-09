@@ -1,0 +1,7 @@
+# javaRssFeedParser
+This web application is an RSS feed parser made in Spring Boot. The application is incomplete and only works for select RSS feeds as of right now. The goal is that the user of this application can enter the link to an RSS feed and a search phrase and will be presented with all the articles from the RSS feed related to that search phrase.
+
+I created this project as a part of an independent project for the 2021 Summer. I first created an RSS reader with Flask which is complete and on my github profile. I chose an RSS feed reader because I am very interested in the New York Yankees and wanted a way where I could stay caught up on all the latest Yankees news from ESPN. Instead of just Yankees news I chose to make a reader that could parse any RSS feed.
+
+Problem:
+For this application I had a tough time finding an RSS parser that worked for me (if you know of one or have an idea please reach out). I created my own parser with the help of this youtube video https://youtu.be/xiK-DH74oJg. My problem is that sometimes the links, published dates and images to the articles are not recognized and the titles that are recognized have some wacky formats. Also, I am able to filter the article titles when a search phrase is entered, but it is difficult to filter the links, published dates, and images. These are the problems I currently have, I am still working to resolve them.
